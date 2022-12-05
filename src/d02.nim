@@ -72,7 +72,7 @@ let parser2 = peg("game", game: Game):
   newline <- '\n' * ?'\r'
   game <- >round * *(newline * >round)
 
-let path = "../inputs/2"
+let path = "../inputs/02"
 
 var game1: Game
 discard parser1.matchFile(path, game1)

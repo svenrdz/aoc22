@@ -22,7 +22,7 @@ proc calories(elves: seq[Elf]): int =
   for elf in elves:
     result.inc elf.calories
 
-let path = "../inputs/1"
+let path = "../inputs/01"
 var elves: seq[Elf]
 discard parser.matchFile(path, elves)
 elves.sort((a, b: Elf) => cmp(a.calories, b.calories), Descending)
